@@ -290,6 +290,16 @@ public class Controller : MonoBehaviour
         {
             ApplyBounce(pad.BounceForce);
         }
+
+        // If the player falls and hits the main floor (Ground2), respawn them
+        if (hit.gameObject.layer == LayerMask.NameToLayer("Ground2"))
+        {
+            PlayerHealth health = GetComponent<PlayerHealth>();
+            if (health != null)
+            {
+                health.Die();
+            }
+        }
     }
 
     void OnDrawGizmosSelected()
