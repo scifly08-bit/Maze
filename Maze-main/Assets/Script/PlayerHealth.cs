@@ -73,7 +73,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         Debug.Log("Player has died! Respawning...");
 
@@ -100,5 +100,17 @@ public class PlayerHealth : MonoBehaviour
     {
         respawnPosition = newPosition;
         Debug.Log("Checkpoint Reached! New spawn point set: " + respawnPosition);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Checkpoint"))
+        {
+            SetRespawnPosition(other.transform.position);
+        }
+        //else if (other.CompareTag("DeathZone"))
+        //{
+            //Die(); // Instantly kill/respawn the player
+        //}
     }
 }
