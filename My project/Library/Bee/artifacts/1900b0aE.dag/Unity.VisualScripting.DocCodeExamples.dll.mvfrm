@@ -142,16 +142,12 @@ RayTracingAccelerationStructure
 RendererList
 RendererUtils
 RendererListStatus
-RayTracingShaderHelpURLAttribute
+RayTracingShader
 PixelPerfectRendering
 U2D
 SpriteBone
 LocalizationAsset
 UnityEditor
-CurrentPlayer
-Unity
-Multiplayer
-Playmode
 SpriteShapeParameters
 UnityEngine
 Experimental
